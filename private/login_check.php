@@ -3,7 +3,7 @@
 require_once dirname(__FILE__)."/../framework/helpers.php";
 
 if (!empty($_POST)){
-    if(!empty($_POST['email'] && !empty($_POST['password'])){
+    if(!empty($_POST['email']) && !empty($_POST['password'])){
         // toto su data pre ulohu 4 zo 17.12
         $users =db_select(sprintf("SELECT * FROM Users WHERE email = '%s'", $_POST['email']) );
        
