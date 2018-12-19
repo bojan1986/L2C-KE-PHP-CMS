@@ -1,53 +1,17 @@
 
 <?php 
 
-
-
-if(!empty($_POST)){
-
-	if(!empty($_POST['action'])){
-
-		switch($_POST['action']){
-
-			case 'insert':
-
-				if(!empty($_POST['email'] && ...))
-
-				// db_query() > INSERT INTO
-
-			break;
-
-			case 'update':
-
-				if(!empty($_POST['ID'])){
-
-					if(!empty($_POST['email'] && ...))
-
-					// db_query() > UPDATE Users SET ...
-
-				}
-
-				
-
-			break;
-
-			case 'delete':
-
-				if(!empty($_POST['ID'])){
-
-				// db_query() > DELETE FROM Users ...
-
-			break
-
-		}
-
-	}
-
+require dirname(__FILE__)."/../framework/helpers.php";
+if(!empty($_REQUEST['ID'])){
+    $users = db_select( sprintf("SELECT * FROM Users WHERE ID = '%d'", $_REQUEST['ID']));
+        if(!empty($users)){
+            
+        $user = $users[0];
+       
+        };
 }
-
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
