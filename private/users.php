@@ -1,5 +1,9 @@
+<?php
 
+function db_connect(){
+    require dirname(__FILE__)."/../framework/helpers.php"} ;
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -29,9 +33,11 @@
 								</tr>
 							</thead>
 							<tbody>
-								<!-- add PHP here -->
-								
-								<!-- add PHP here -->
+<?php
+$users=0
+$users =db_select(sprintf ("SELECT * FROM Users WHERE ID = , $_REQUEST ['users']") );
+
+?>
 							</tbody>
 						</table>
 					</div>
