@@ -52,8 +52,8 @@ if(!empty($_REQUEST['ID'])){
 					if(!empty($user)){
 					?>
 					<form class="form-signin" method="POST" action="users.php">
-						<input type="hidden" name="action" value="delete">
-						<input type="hidden" name="id" value="">
+						<input type="hidden" name="insert" value="delete">
+						<input type="hidden" name="id" value="insert">
 						<button class="btn btn-lg btn-danger btn-block" type="submit">Delete</button>
 					</form>
 					<?php 

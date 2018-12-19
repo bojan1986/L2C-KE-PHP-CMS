@@ -12,7 +12,8 @@ if (!empty($_POST)){
 
             if($user->password == $_POST['password']){
             //email aj heslo suhlasia, ideme dalej
-                echo  $user->email;
+            $_SESSION["email"] = $_POST['email'];
+            header('Location: index.php');
             }else{
                 echo "Nesuhlasi heslo";
                 $_POST['email']&&['password'];
